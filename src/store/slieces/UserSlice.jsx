@@ -1,13 +1,15 @@
+/* eslint-disable no-unused-vars */
 import { createSlice } from "@reduxjs/toolkit";
 
 const userSlice = createSlice({
-     name: 'user',
+     name: "users",
      initialState: [],
      reducers: {
           addUser(state, action) {},
-          removeusUser(state, action){},
-          deleteUsers(state, action){},
+          removeUser(state, action) {},
+          deleteUsers(state, action) {},
      },
-})
+});
+console.log(userSlice.actions);
 
-export { userSlice };
+export default userSlice.reducer;
