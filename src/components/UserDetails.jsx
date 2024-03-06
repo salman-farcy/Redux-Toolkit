@@ -4,9 +4,11 @@ import styled from "styled-components";
 import { fakeUserData } from "../api";
 import { useDispatch } from "react-redux";
 import { addUser } from "../store/slieces/UserSlice";
+import DisplayUsers from "./DisplayUsers";
 
 const UserDetails = () => {
   const dispatch = useDispatch()
+
   const addNewUser = (name) => {
     console.log(name);
     dispatch(addUser(name))
@@ -20,12 +22,11 @@ const UserDetails = () => {
           <button onClick={() => addNewUser(fakeUserData())} className="btn add-btn">Add New Users</button>
         </div>
         <ul>
-          <li>Hi</li>
-          <li>Hii</li>
+          <DisplayUsers />
         </ul>
         <hr />
         <DeleteAllUser />
-      </div>
+      </div> 
     </Wrapper>
   );
 };
