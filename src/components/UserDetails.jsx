@@ -2,11 +2,14 @@
 import { DeleteAllUser } from "./DeleteAllUser";
 import styled from "styled-components";
 import { fakeUserData } from "../api";
+import { useDispatch } from "react-redux";
+import { addUser } from "../store/slieces/UserSlice";
 
 const UserDetails = () => {
-  const addNewUser = (payload) => {
-    console.log(payload);
-    
+  const dispatch = useDispatch()
+  const addNewUser = (name) => {
+    console.log(name);
+    dispatch(addUser(name))
   };
 
   return (
