@@ -11,11 +11,8 @@ const DisplayUsers = () => {
      const data = useSelector((state) => {
           return state.users;
      })
-     console.log(data);
 
      const deleteUser = (id) => {
-          // console.log(id);
-          
           dispatch(removeUser(id))
      }
  
