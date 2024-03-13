@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import styled from "styled-components";
+import { MdDeleteForever } from "react-icons/md";
 
 
 
@@ -15,6 +16,9 @@ const DisplayUsers = () => {
                     data.map((user, id) => (
                          <li key={id}>
                               {user}
+                              <button className="btn btn-delete">
+                                   <MdDeleteForever />
+                              </button>
                          </li>
                     ))
                }
@@ -28,6 +32,9 @@ const Wrapper = styled.section`
   li {
      text-align: left;
      margin: 2rem 0 2rem  0;
+     display: flex;
+     justify-content:space-between;
+     align-items: center;
   }
 `;
 
