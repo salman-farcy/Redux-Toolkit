@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { createSlice } from "@reduxjs/toolkit";
+import { clearAllUsers } from "../actions";
 
 
 const userSlice = createSlice({
@@ -17,10 +18,15 @@ const userSlice = createSlice({
           },
           deleteUsers(state, action) {
                // console.log("HI al user");
-
                return  [];
           },
      },
+
+     extraReducers(builder){
+          builder.addCase(clearAllUsers, () => {
+               return  [];
+          });
+     }
 });
 console.log(userSlice.actions);
 

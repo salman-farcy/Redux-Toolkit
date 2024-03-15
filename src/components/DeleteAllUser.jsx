@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import { deleteUsers } from "../store/slieces/UserSlice";
 
+
 export const DeleteAllUser = () => {
   const dispatch = useDispatch()
   const deleteClerUsers = () => {
